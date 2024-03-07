@@ -1,0 +1,94 @@
+/* custom-section.css */
+
+.custom-section {
+    display: flex;
+    flex-direction: column; /* o 'column' si es lo que deseas */
+    align-items: flex-start; /* o 'center', 'flex-end', etc., según tus necesidades */
+    justify-content: space-between; /* o 'center', 'space-between', etc. */
+    /* Resto de tus estilos */
+}
+  
+.custom-section .section-title {
+    margin-bottom: 0px;
+    font-size: 3em; /* Tamaño de fuente grande para el título */
+    color: #c800c1; /* Color del título similar al de tu sitio */
+  }
+  
+.container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite la adaptabilidad a dispositivos móviles */
+}
+
+  
+.col-custom {
+    display: flex; /* Habilita flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten según el ancho */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    width: 25%; /* Imita el ancho de col-md-6 para dispositivos medianos */
+    margin-bottom: 0px; /* Espaciado entre elementos similar a col-md-6 */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7); /* Estilo de sombra de col-content */
+    border-radius: 10px; /* Bordes redondeados de col-content */
+    padding: 20px; /* Padding interno */
+    color: #ffffff; /* Color de texto de col-content */
+    background-color: black; /* Asumiendo un color de fondo; ajusta según necesites */
+}
+
+.col-custom img {
+    max-width: 40%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
+    
+}
+
+.col-custom h3, .col-custom p {
+    margin: 0; /* Elimina márgenes predeterminados para ajustar el texto cerca de la imagen */
+}
+
+
+/* Estilos específicos para títulos y párrafos, como en col-content */
+.col-custom h3 {
+    font-size: 3em; /* Tamaño de fuente para el título */
+    color: black; /* Color específico del título */
+    margin-bottom: 0;
+}
+
+.col-custom p {
+    font-size: 1.5em; /* Tamaño de fuente para el párrafo */
+    padding-bottom: 10px; /* Ajusta según sea necesario */
+}
+
+.custom-content-style {
+    /* Estilos de col-content (colores, fuentes, sombras, etc.) */
+    color: white; /* Ejemplo de color de texto */
+    background-color: black; /* Ejemplo de color de fondo */
+    border-radius: 10px;
+    padding: 0px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
+    /* No incluyas propiedades que alteren el layout aquí, solo estilos visuales */
+}
+
+.custom-content-style h3{
+    /* Estilos de col-content (colores, fuentes, sombras, etc.) */
+    color: #c800c1; /* Ejemplo de color de texto */
+    background-color: black; /* Ejemplo de color de fondo */
+    border-radius: 50px;
+    padding: 0px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
+    /* No incluyas propiedades que alteren el layout aquí, solo estilos visuales */
+}
+
+.custom-content-style img {
+    max-width: 50%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
+    display: block; /* Hace que la imagen sea un bloque para permitir el centrado */
+    margin: auto; /* Centra la imagen horizontalmente si el contenedor es más ancho */
+    height: auto; /* Asegura que la altura de la imagen se ajuste proporcionalmente */
+}
+
+.custom-content-style p {
+    text-align: justify; /* Justifica el texto del párrafo */
+    text-justify: inter-word; /* Mejora la justificación para que el espaciado sea entre palabras */
+}
