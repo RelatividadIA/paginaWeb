@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/loaders/GLTFLoader.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats de Emilio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="3D.css" rel="stylesheet">
+    <link href="barra-de-chats-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="LogoLetrasBlancasSinFondo.png" alt="Logo" class="logo">
+    </header>
+
+    <div class="top-section">
+        <div id="contenedor-icosaedro"></div>
+        <h1 class="title">Inteligencia Artificial</h1>
+        <h1 class="title-part2">potenciando tu organización</h1>
+    </div>
+    
+    <div class="text-between">
+        <p>Bots entrenados a la medida de tu empresa trabajando 24 horas al día, 7 días a la semana y 366 días del año para tí.</p>
+    </div>
+    <div class="Barra-de-chats-horizontal">
+        <div class="chat-box" data-chat-number='1'></div> <!-- Primer Chat -->
+        <div id="contenedor-3d"></div>
+        <div class="chat-box" data-chat-number='2'></div> <!-- Primer Chat -->
+    </div>
+    <div class="Barra-de-figuras3D">
+        
+        
+    </div>
+    
+    <!-- Contenedores para los Chats con data-chat-number -->
+    
+
+    
+    <script type="module"  src="3D.js"></script>
+    <script type="module"  src="icosaedro.js"></script>
+    <script type="module"  src="robot.js"></script>
+    <script src="textoDinamico.js"></script>
+    <script src="funciones.js"></script>
+    <script src="simulated_script_2.js"></script> <!-- Script para el segundo chat -->
+    
+</body>
+</html>

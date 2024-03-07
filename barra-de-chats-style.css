@@ -1,0 +1,38 @@
+.Barra-de-chats-horizontal {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0; /* Añade padding arriba y abajo para espacio vertical */
+    position: relative; /* Esto es importante para posicionar los botones de flecha */
+}
+
+
+
+.chat-box {
+    margin: 10px; /* Añade un margen alrededor de cada chat para separarlos */
+    flex-shrink: 0; /* Esto previene que los elementos se encogan */
+    /* tus otros estilos aquí */
+}
+
+#scrollLeft, #scrollRight {
+    position: absolute; /* Posicionamiento absoluto con respecto al contenedor relativo */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar al centro */
+    z-index: 10; /* Asegurar que estén sobre los chats */
+}
+
+#scrollLeft {
+    left: 0; /* Alineado a la izquierda */
+}
+
+#scrollRight {
+    right: 0; /* Alineado a la derecha */
+}
+
+.Barra-de-figuras3D {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0; /* Añade padding arriba y abajo para espacio vertical */
+    position: relative; /* Esto es importante para posicionar los botones de flecha */
+}
