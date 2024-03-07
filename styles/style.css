@@ -66,6 +66,35 @@ header {
 }
 
 
+.form-control {
+    color: white;
+    background-color: #222; /* Fondo similar al de WhatsApp */
+}
+
+.form-control:hover {
+    background-color: #222; /* Maintain the black background on hover */
+    color: white; /* Maintain the white text color on hover */
+}
+
+.form-control:focus {
+    background-color: #222; /* Maintain the black background */
+    color: white; /* Maintain the white text color */
+    outline: none; /* Optional: removes the default focus outline */
+}
+
+.form-control::placeholder { /* Estiliza el texto del placeholder */
+    color: white; /* Cambia el color del texto del placeholder a blanco */
+    opacity: 0.3; /* Opcional: asegura que el color sea totalmente opaco */
+}
+
+.form-control:hover::placeholder {
+    color: white; /* Mantiene el color del placeholder en blanco al pasar el mouse */
+}
+
+.form-control:focus::placeholder {
+    color: white; /* Mantiene el color del placeholder en blanco al enfocar */
+}
+
 .chat-form {
     padding: 10px;
     background-color: #222; /* Fondo oscuro para el formulario */

@@ -9,29 +9,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chats de Emilio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link href="3D.css" rel="stylesheet">
-    <link href="barra-de-chats-style.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/style_celular.css" rel="stylesheet">
+    <link href="../styles/3D.css" rel="stylesheet">
+    <link href="../styles/barra-de-chats-style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
-        <img src="LogoLetrasBlancasSinFondo.png" alt="Logo" class="logo">
+        <img src="../images/LogoLetrasBlancasSinFondo.png" alt="Logo" class="logo">
     </header>
 
     <div class="top-section">
         <div id="contenedor-icosaedro"></div>
         <h1 class="title">Inteligencia Artificial</h1>
-        <h1 class="title-part2">potenciando tu organización</h1>
+        <h1        class="title-part2">potenciando tu organización</h1>
     </div>
     
     <div class="text-between">
         <p>Bots entrenados a la medida de tu empresa trabajando 24 horas al día, 7 días a la semana y 366 días del año para tí.</p>
     </div>
     <div class="Barra-de-chats-horizontal">
-        <div class="chat-box" data-chat-number='1'></div> <!-- Primer Chat -->
+        <div class="chat-box" data-chat-number='1'></div>
         <div id="contenedor-3d"></div>
-        <div class="chat-box" data-chat-number='2'></div> <!-- Primer Chat -->
+        <div class="chat-box" data-chat-number='2'></div>
+        <div class="chat-box" data-chat-number='3'></div>  
     </div>
     <div class="Barra-de-figuras3D">
         
@@ -42,12 +44,12 @@
     
 
     
-    <script type="module"  src="3D.js"></script>
-    <script type="module"  src="icosaedro.js"></script>
-    <script type="module"  src="robot.js"></script>
-    <script src="textoDinamico.js"></script>
-    <script src="funciones.js"></script>
-    <script src="simulated_script_2.js"></script> <!-- Script para el segundo chat -->
+    <script type="module"  src="../scripts/3D.js"></script>
+    <script type="module"  src="../scripts/icosaedro.js"></script>
+    <script type="module"  src="../scripts/robot.js"></script>
+    <script src="../scripts/textoDinamico.js"></script>
+    <script src="../scripts/funciones.js"></script>
+    <script src="../scripts/simulated_script_2.js"></script> <!-- Script para el segundo chat -->
     
 </body>
 </html>
