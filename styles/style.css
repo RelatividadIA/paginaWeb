@@ -175,59 +175,7 @@ textarea {
     width: 100%;
 }
 
-.title {
-    background-image: linear-gradient(to right, #915391, rgb(170, 82, 170), rgb(255, 255, 130));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent; /* Fallback: aunque algunos navegadores no soportan esta propiedad, no afectará a la visibilidad del texto */
-    font-size: 92px; /* O el tamaño que desees */
-    font-family: 'League Spartan', sans-serif;
-    
+.contenedor-icosaedro{
+    height: 80px;
 }
 
-
-.header {
-    padding: 0;
-    margin: 0;
-    display: flex; /* Usa flexbox para centrar fácilmente el contenido */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-}
-
-.logo {
-    display: block; /* Asegura que img se trate como un bloque para aplicar margin y align */
-    margin-left: 5px; /* Alinea el logo al borde izquierdo */
-    width: 300px;  /* Cambia '100px' por el ancho deseado */
-    height: auto;  /* Mantiene la proporción de aspecto de la imagen */
-}
-
-/* Media query para dispositivos con un ancho máximo de 600px */
-@media (max-width: 600px) {
-    .logo {
-        display: block;
-        margin-left: 0; /* Remueve el margen izquierdo para centrar en dispositivos móviles */
-        width: 200px; /* Reduce el tamaño del logo */
-    }
-    .title {
-        font-size: 36px; /* O el tamaño que desees */
-    }
-}
-
-
-.text-between {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 18px;
-    color: #fff; /* Texto claro */
-    font-family: 'League Spartan', sans-serif;
-}
-
-  
-
-  
-
-
-
-
-/* Ajustes adicionales para el tema nocturno que quieras añadir */

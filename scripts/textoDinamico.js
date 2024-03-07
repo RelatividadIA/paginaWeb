@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const titleElement = document.querySelector('.top-section .title'); // Selecciona el elemento h1
-    const textOptions = ["Inteligencia Artificial", "Bases de Datos", "Analítica de Datos" , "Tecnología"]; // Define las opciones de texto
+    const textOptions = ["Inteligencia Artificial", "Comportamiento Humano","Bases de Datos", "Analítica Predictiva" ]; // Define las opciones de texto
     let currentIndex = 0; // Inicia con el primer ítem de texto
 
     setInterval(() => {
