@@ -36,7 +36,8 @@
         width: 200px; /* Reduce el tamaño del logo */
     }
     .title {
-        font-size: 72px; /* O el tamaño que desees */
+        min-height: 45px;
+        font-size: 45px; /* O el tamaño que desees */
     }
 }
 

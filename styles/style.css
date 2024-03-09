@@ -32,6 +32,13 @@ header {
     overflow: hidden;
 }
 
+@media (max-width: 900px) {
+    .chat-container {
+        width: 300px; /* Ancho máximo para pantallas más grandes */
+        height: 400px;
+        
+    }
+}
 
 .chat-header {
     display: flex;
@@ -55,6 +62,15 @@ header {
     height: 100px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+    .profile-picture img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
 }
 
 .chat-messages {
@@ -138,6 +154,10 @@ textarea {
     clear: both;
 }
 
+.text-between {
+    padding: 25px;
+}
+
 /* Estilos específicos para mensajes del usuario */
 .message-bubble.user {
     background-color: #1b1b1b; /* Fondo oscuro para los mensajes del usuario */
@@ -166,7 +186,7 @@ textarea {
 }
 
 .top-section {
-    padding: 10px;
+    padding: 25px;
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
