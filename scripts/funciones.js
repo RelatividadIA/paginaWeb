@@ -4,7 +4,7 @@ function handleFormSubmit(event,chat_id) {
 }
 
 
-function inicializarChat(chat_id) {
+function inicializarChat(chat_id,training_prompt) {
     console.log("Inicializando eventos del chat...");
 
     const promptForm = findElementByClassAndDataChatNumber('chat-form', chat_id);
@@ -26,7 +26,7 @@ function inicializarChat(chat_id) {
     const clearButton = document.querySelector('.btn-clear');
     console.log("Botón de limpieza encontrado:", clearButton);
     if (clearButton) {
-        clearButton.addEventListener("click", () => resetConversation(chat_id));
+        clearButton.addEventListener("click", () => resetConversation(chat_id,training_prompt));
     } else {
         console.error("El botón 'btn-clear' no se encontró en el DOM.");
     }
@@ -55,7 +55,7 @@ function cargarChat(id, training_prompt) {
             // Encuentra todos los elementos dentro del contenedor y agrega el atributo data-chat-number
             addDataChatNumber(chatContainer, chat_id);
 
-            inicializarChat(chat_id); // Se confirma que esta línea se ejecuta con el mensaje de consola.
+            inicializarChat(chat_id,training_prompt); // Se confirma que esta línea se ejecuta con el mensaje de consola.
             // Inicializar la conversación al cargar la página
             // Esperamos a que el DOM se cargue completamente
             // Ejemplo de uso
@@ -88,39 +88,34 @@ function addDataChatNumber(container, chat_id) {
 
 // Función para renderizar el historial de la conversación en la interfaz
 function renderConversationHistory(chat_id) {
-
     let conversationElement = findElementByClassAndDataChatNumber('chat-messages', chat_id);
     if (conversationElement) {
         // Limpiar la conversación actual y añadir los nuevos mensajes aquí
-        conversationElement.innerHTML = ''; // Ahora seguro de que conversationElement no es null.
-        // Añadir mensajes...
+        conversationElement.innerHTML = ''; // Asegurarse de que conversationElement no sea null.
+        
+        conversations[chat_id].filter(message => message.role !== "system").forEach(message => {
+            let messageElement = document.createElement("div");
+            messageElement.classList.add('message-bubble');
+            messageElement.classList.add(message.role === "user" ? "user" : "assistant");
+
+            if (message.content.startsWith("escribiendo")) {
+                messageElement.classList.add("writing");
+            }
+
+            messageElement.innerText = message.content;
+            conversationElement.appendChild(messageElement);
+        });
+
+        // Después de agregar todos los mensajes, ajusta el scrollTop para hacer scroll solo dentro del contenedor
+        conversationElement.scrollTop = conversationElement.scrollHeight;
     } else {
-        console.error("El elemento 'apiResponse' no se encontró en el DOM.");
-    }
-    
-
-
-    conversations[chat_id].filter(message => message.role !== "system").forEach(message => {
-        let messageElement = document.createElement("div");
-        messageElement.classList.add('message-bubble');
-        messageElement.classList.add(message.role === "user" ? "user" : "assistant");
-
-        if (message.content.startsWith("escribiendo")) {
-            messageElement.classList.add("writing");
-        }
-
-        messageElement.innerText = message.content;
-        conversationElement.appendChild(messageElement);
-    });
-
-    let lastMessageElement = conversationElement.lastChild;
-    if (lastMessageElement) {
-        lastMessageElement.scrollIntoView({ behavior: 'smooth' });
+        console.error("El elemento 'chat-messages' no se encontró en el DOM.");
     }
 }
 
+
 // Función para resetear la conversación
-function resetConversation(chat_id) {
+function resetConversation(chat_id,training_prompt) {
     findElementByClassAndDataChatNumber('form-control', chat_id).value = '';
     findElementByClassAndDataChatNumber('chat-messages', chat_id).innerHTML = ''; // Limpiar la visualización de la conversación
     conversations[chat_id] = [{ role: "system", content: training_prompt }]; // Reiniciar con el prompt de entrenamiento
